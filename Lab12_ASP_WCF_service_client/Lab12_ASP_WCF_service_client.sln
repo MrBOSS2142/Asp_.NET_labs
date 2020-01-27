@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12_ASP_WCF_service_client", "Lab12_ASP_WCF_service_client\Lab12_ASP_WCF_service_client.csproj", "{EA433277-86F6-4333-953B-DA604EEDD0E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA433277-86F6-4333-953B-DA604EEDD0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA433277-86F6-4333-953B-DA604EEDD0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA433277-86F6-4333-953B-DA604EEDD0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA433277-86F6-4333-953B-DA604EEDD0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CE14FFA-E448-4DD2-A135-918C85E0465C}
+	EndGlobalSection
+EndGlobal

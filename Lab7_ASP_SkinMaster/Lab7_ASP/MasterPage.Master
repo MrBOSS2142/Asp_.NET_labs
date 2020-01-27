@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Lab7_ASP.MasterPage" %>
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My SiteMaster</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+
+       <link href="~/Content/MyStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+
+            <div>
+                <p>Строка из сайт мастера!</p>
+            </div>
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="Body" runat="server">
+               <p>sadsadasdasds</p>
+                </asp:ContentPlaceHolder>
+                <hr />
+                 <br>
+                 <a runat="server" href="~/">Вернуться назад</a>
+                <footer>
+                    <p>&copy;
+                        <%: DateTime.Now.Year %> - 7-я лаба ASP</p>
+                </footer>
+            </div>
+        </form>
+    </body>
+
+    </html>

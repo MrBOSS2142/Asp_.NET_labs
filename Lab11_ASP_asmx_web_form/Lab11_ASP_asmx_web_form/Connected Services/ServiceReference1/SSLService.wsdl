@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastSum">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastSumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastSumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalculations">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCalculationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalculationsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCalculationsApll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCalculationsApllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalculationsApllResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DropApp">
+        <s:complexType />
+      </s:element>
+      <s:element name="DropAppResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastSub">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastSubResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastSubResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sub">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mul">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MulResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MulResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastSum" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalculations" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalculationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculationsApllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalculationsApll" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculationsApllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalculationsApllResponse" />
+  </wsdl:message>
+  <wsdl:message name="DropAppSoapIn">
+    <wsdl:part name="parameters" element="tns:DropApp" />
+  </wsdl:message>
+  <wsdl:message name="DropAppSoapOut">
+    <wsdl:part name="parameters" element="tns:DropAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSubSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastSub" />
+  </wsdl:message>
+  <wsdl:message name="GetLastSubSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubSoapIn">
+    <wsdl:part name="parameters" element="tns:Sub" />
+  </wsdl:message>
+  <wsdl:message name="SubSoapOut">
+    <wsdl:part name="parameters" element="tns:SubResponse" />
+  </wsdl:message>
+  <wsdl:message name="MulSoapIn">
+    <wsdl:part name="parameters" element="tns:Mul" />
+  </wsdl:message>
+  <wsdl:message name="MulSoapOut">
+    <wsdl:part name="parameters" element="tns:MulResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SSLServiceSoap">
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSum">
+      <wsdl:input message="tns:GetLastSumSoapIn" />
+      <wsdl:output message="tns:GetLastSumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculations">
+      <wsdl:input message="tns:GetCalculationsSoapIn" />
+      <wsdl:output message="tns:GetCalculationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculationsApll">
+      <wsdl:input message="tns:GetCalculationsApllSoapIn" />
+      <wsdl:output message="tns:GetCalculationsApllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DropApp">
+      <wsdl:input message="tns:DropAppSoapIn" />
+      <wsdl:output message="tns:DropAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSub">
+      <wsdl:input message="tns:GetLastSubSoapIn" />
+      <wsdl:output message="tns:GetLastSubSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <wsdl:input message="tns:SubSoapIn" />
+      <wsdl:output message="tns:SubSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <wsdl:input message="tns:MulSoapIn" />
+      <wsdl:output message="tns:MulSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SSLServiceSoap" type="tns:SSLServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSum">
+      <soap:operation soapAction="http://tempuri.org/GetLastSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculations">
+      <soap:operation soapAction="http://tempuri.org/GetCalculations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculationsApll">
+      <soap:operation soapAction="http://tempuri.org/GetCalculationsApll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropApp">
+      <soap:operation soapAction="http://tempuri.org/DropApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSub">
+      <soap:operation soapAction="http://tempuri.org/GetLastSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap:operation soapAction="http://tempuri.org/Sub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap:operation soapAction="http://tempuri.org/Mul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSLServiceSoap12" type="tns:SSLServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSum">
+      <soap12:operation soapAction="http://tempuri.org/GetLastSum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculations">
+      <soap12:operation soapAction="http://tempuri.org/GetCalculations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculationsApll">
+      <soap12:operation soapAction="http://tempuri.org/GetCalculationsApll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DropApp">
+      <soap12:operation soapAction="http://tempuri.org/DropApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSub">
+      <soap12:operation soapAction="http://tempuri.org/GetLastSub" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sub">
+      <soap12:operation soapAction="http://tempuri.org/Sub" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mul">
+      <soap12:operation soapAction="http://tempuri.org/Mul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSLService">
+    <wsdl:port name="SSLServiceSoap" binding="tns:SSLServiceSoap">
+      <soap:address location="http://localhost:84/SSLService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSLServiceSoap12" binding="tns:SSLServiceSoap12">
+      <soap12:address location="http://localhost:84/SSLService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
